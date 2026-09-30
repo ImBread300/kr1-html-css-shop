@@ -195,6 +195,7 @@ a:focus-visible {
 
 .product-card {
   flex: 1 1 300px;
+  position: relative;
 
   margin-bottom: 0;
   padding: var(--space-md);
@@ -202,6 +203,20 @@ a:focus-visible {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background-color: var(--color-bg);
+}
+
+.product-card__badge {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+
+  padding: var(--space-xs) var(--space-sm);
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: var(--radius-sm);
+
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .product-card:hover {
@@ -229,6 +244,33 @@ a:focus-visible {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background-color: var(--color-surface);
+}
+
+.back-to-top {
+  position: fixed;
+  right: var(--space-lg);
+  bottom: var(--space-lg);
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: 50%;
+
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.back-to-top:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary-dark);
 }
 
 

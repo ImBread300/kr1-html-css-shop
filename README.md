@@ -48,6 +48,7 @@ GitHub Pages: https://ImBread300.github.io/kr1-html-css-shop/
 - визуальная подсветка ошибочных полей через `aria-invalid`;
 - структурированный файл `css/style.css`.
 - применение Flexbox для компоновки элементов;
+- базовое позиционирование элементов с помощью `relative`, `absolute` и `fixed`;
 
 
 ## Реализованные элементы интерфейса
