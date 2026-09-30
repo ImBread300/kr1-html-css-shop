@@ -83,8 +83,25 @@ footer {
   чтобы оно не растягивалось слишком сильно на широких экранах.
 */
 .site-header {
-  max-width: 1100px;
+  max-width: var(--container-width);
   margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-nav__list {
+  display: flex;
+  gap: var(--space-lg);
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-nav__list li {
+  margin-bottom: 0;
 }
 
 /*
@@ -111,31 +128,6 @@ a:hover {
 a:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
-}
-
-
-/*
-  Убираем стандартные отступы и маркеры списка навигации.
-*/
-.site-nav__list {
-  padding: 0;
-  margin: 16px 0 0;
-  list-style: none;
-}
-
-/*
-  Добавляем расстояние между пунктами меню.
-*/
-.site-nav__list li {
-  margin-bottom: 8px;
-}
-
-/*
-  Оформляем ссылки меню.
-*/
-.site-nav__list a {
-  color: #0057b8;
-  text-decoration: none;
 }
 
 /*
@@ -195,9 +187,18 @@ a:focus-visible {
   margin-top: 0;
 }
 
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+}
+
 .product-card {
-  margin-bottom: var(--space-md);
+  flex: 1 1 300px;
+
+  margin-bottom: 0;
   padding: var(--space-md);
+
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background-color: var(--color-bg);
@@ -209,6 +210,25 @@ a:focus-visible {
 
 .product-card h3 {
   margin-top: 0;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.advantages-list li {
+  flex: 1 1 220px;
+  padding: var(--space-md);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
 }
 
 

@@ -47,6 +47,7 @@ GitHub Pages: https://ImBread300.github.io/kr1-html-css-shop/
 - состояния `:hover`, `:focus-visible`, `:disabled`;
 - визуальная подсветка ошибочных полей через `aria-invalid`;
 - структурированный файл `css/style.css`.
+- применение Flexbox для компоновки элементов;
 
 
 ## Реализованные элементы интерфейса
@@ -63,6 +64,7 @@ GitHub Pages: https://ImBread300.github.io/kr1-html-css-shop/
 - `index.html` — главная страница;
 - `css/style.css` — файл стилей;
 - `images/` — папка для изображений;
+- `js/main.js` — JavaScript-логика проекта;
 - `.gitignore` — список файлов, исключённых из Git;
 - `README.md` — описание проекта.
 
@@ -70,6 +72,7 @@ GitHub Pages: https://ImBread300.github.io/kr1-html-css-shop/
 
 - HTML;
 - CSS;
+- JavaScript;
 - Git;
 - GitHub.
 
