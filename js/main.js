@@ -29,7 +29,7 @@ closeDialogButton.addEventListener('click', () => {
   orderDialog.close();
 });
 
-// Якорная ссылка «Обратная связь» открывает форму и с других страниц.
+// Кнопка «Перейти к форме» на странице контактов открывает заявку.
 function openOrderDialogFromHash() {
   if (window.location.hash === '#order-dialog' && !orderDialog.open) {
     selectedProductInput.value = '';
@@ -39,15 +39,6 @@ function openOrderDialogFromHash() {
 
 window.addEventListener('hashchange', openOrderDialogFromHash);
 openOrderDialogFromHash();
-
-document.querySelectorAll('a[href="#order-dialog"]').forEach((link) => {
-  link.addEventListener('click', () => {
-    if (!orderDialog.open) {
-      selectedProductInput.value = '';
-      orderDialog.showModal();
-    }
-  });
-});
 
 
 // Получаем форму заявки.
