@@ -29,6 +29,26 @@ closeDialogButton.addEventListener('click', () => {
   orderDialog.close();
 });
 
+// Якорная ссылка «Обратная связь» открывает форму и с других страниц.
+function openOrderDialogFromHash() {
+  if (window.location.hash === '#order-dialog' && !orderDialog.open) {
+    selectedProductInput.value = '';
+    orderDialog.showModal();
+  }
+}
+
+window.addEventListener('hashchange', openOrderDialogFromHash);
+openOrderDialogFromHash();
+
+document.querySelectorAll('a[href="#order-dialog"]').forEach((link) => {
+  link.addEventListener('click', () => {
+    if (!orderDialog.open) {
+      selectedProductInput.value = '';
+      orderDialog.showModal();
+    }
+  });
+});
+
 
 // Получаем форму заявки.
 const orderForm = document.getElementById('order-form');

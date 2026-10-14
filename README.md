@@ -36,6 +36,22 @@ GitHub Pages: https://ImBread300.github.io/kr1-html-css-shop/
 - Практическая работа 4: добавлены CSS-переменные, состояния интерфейса и упорядочена структура стилей.
 - Практическая работа 5: создана многостраничная структура сайта, добавлены единая навигация и якорные ссылки.
 - Практическая работа 6: добавлены Flexbox-навигация и Grid-раскладка карточек и каталога.
+- Практическая работа 7: выполнен рефакторинг CSS-стилей по методологии БЭМ.
+
+## БЭМ-структура проекта
+
+- `site-header` — шапка, внутренний контейнер и логотип;
+- `site-nav` — меню с элементами `__list`, `__item`, `__link` и модификатором `__link--active`;
+- `breadcrumbs` — хлебные крошки с элементами `__link` и `__current`;
+- `site-main`, `hero`, `section` — основная область и разделы страниц;
+- `products-grid` — общая сетка товаров на главной и в каталоге;
+- `product-card` — переиспользуемая карточка с элементами `__title`, `__description`, `__price`, `__button`, `__badge` и модификатором `--featured`;
+- `catalog-layout`, `catalog-products`, `catalog-filters` — макет каталога, товары и фильтры;
+- `order-dialog` — модальное окно с элементом `__title`;
+- `order-form` — форма с элементами `__field`, `__label`, `__input`, `__select`, `__textarea`, `__checkbox`, `__hint`, `__actions`;
+- `button` — кнопка с модификаторами `--primary` и `--secondary`;
+- `advantages-list`, `aside-info`, `success-message`, `back-to-top` — дополнительные компоненты;
+- `site-footer` — подвал сайта.
 
 
 ## CSS-архитектура
