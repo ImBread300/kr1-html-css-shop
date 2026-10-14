@@ -73,6 +73,8 @@
 
       <div class="products-grid">
         <article class="product-card product-card--featured">
+          <img class="product-card__image" src="images/product_1.png"
+            alt="Товар 1" width="640" height="480" loading="lazy" decoding="async">
           <h3 class="product-card__title">Товар 1</h3>
           <span class="product-card__badge">Хит</span>
 
@@ -85,6 +87,10 @@
         </article>
 
         <article class="product-card">
+
+          <img class="product-card__image" src="images/product_2.png"
+
+            alt="Товар 2" width="640" height="480" loading="lazy" decoding="async">
           <h3 class="product-card__title">Товар 2</h3>
           <p class="product-card__description">Краткое описание учебного товара.</p>
           <p class="product-card__price">Цена: 1500 руб.</p>
@@ -95,6 +101,10 @@
         </article>
 
         <article class="product-card">
+
+          <img class="product-card__image" src="images/product_3.png"
+
+            alt="Товар 3" width="640" height="480" loading="lazy" decoding="async">
           <h3 class="product-card__title">Товар 3</h3>
           <p class="product-card__description">Краткое описание учебного товара.</p>
           <p class="product-card__price">Цена: 2000 руб.</p>
@@ -109,6 +119,51 @@
     <p class="success-message" id="success-message" role="status" hidden>
       Форма успешно отправлена!
     </p>
+
+    <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+      <h2 class="section__title" id="reviews-title">Отзывы о сайте</h2>
+      <p class="reviews__note">Учебные примеры отзывов для демонстрации блока.</p>
+
+      <ul class="reviews__list">
+        <li class="reviews__item">
+          <figure class="review-card">
+            <figcaption class="review-card__author">Анна</figcaption>
+            <p class="review-card__rating" aria-label="Оценка: 5 из 5">
+              <span aria-hidden="true">★★★★★</span>
+            </p>
+            <blockquote class="review-card__text">
+              Понятное меню: легко найти каталог и посмотреть товары.
+              Особенно удобно, что фильтры остаются рядом при прокрутке.
+            </blockquote>
+          </figure>
+        </li>
+        <li class="reviews__item">
+          <figure class="review-card">
+            <figcaption class="review-card__author">Иосиф</figcaption>
+            <p class="review-card__rating" aria-label="Оценка: 5 из 5">
+              <span aria-hidden="true">★★★☆☆</span>
+            </p>
+            <blockquote class="review-card__text">
+              Карточки аккуратные, изображения хорошо видны. Цена и кнопка
+              заказа сразу на виду — не приходится искать нужную информацию.
+            </blockquote>
+          </figure>
+        </li>
+        <li class="reviews__item">
+          <figure class="review-card">
+            <figcaption class="review-card__author">Владимир</figcaption>
+            <p class="review-card__rating" aria-label="Оценка: 4 из 5">
+              <span aria-hidden="true">★★★★☆</span>
+            </p>
+            <blockquote class="review-card__text">
+              Форма заявки простая, ошибки в полях подсвечиваются.
+              Хотелось бы видеть больше подробностей о каждом товаре.
+            </blockquote>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
     <aside class="aside-info">
       <h2 class="aside-info__title">Информация для студентов</h2>
       <p>
