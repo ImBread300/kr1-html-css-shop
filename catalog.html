@@ -108,46 +108,133 @@
 
                 <div class="products-grid">
                     <article class="product-card product-card--featured">
-                      <img class="product-card__image" src="images/product_1.png"
-                        alt="Товар 1" width="640" height="480" loading="lazy" decoding="async">
-                        <h3 class="product-card__title">Товар 1</h3>
+                        <img class="product-card__image" src="images/product_1.png"
+                          alt="Противогаз ГП-7ВМ" width="640" height="640" loading="lazy" decoding="async">
+                        <h3 class="product-card__title">Противогаз ГП-7ВМ</h3>
                         <span class="product-card__badge">Хит</span>
-                        <p class="product-card__description">Краткое описание учебного товара.</p>
+                        <p class="product-card__description">Защита дыхания, глаз и лица с подходящим фильтром.</p>
                         <p class="product-card__price">Цена: 1000 руб.</p>
-                        <a class="button button--primary product-card__button" href="index.html#popular">Подробнее</a>
+                        <button class="button button--primary product-card__button" type="button" data-product="Противогаз ГП-7ВМ">Заказать</button>
                     </article>
 
                     <article class="product-card">
-
-                      <img class="product-card__image" src="images/product_2.png"
-
-                        alt="Товар 2" width="640" height="480" loading="lazy" decoding="async">
-                        <h3 class="product-card__title">Товар 2</h3>
-                        <p class="product-card__description">Краткое описание учебного товара.</p>
-                        <p class="product-card__price">Цена: 1500 руб.</p>
-                        <a class="button button--primary product-card__button" href="index.html#popular">Подробнее</a>
-                    </article>
-
-                    <article class="product-card">
-
-                      <img class="product-card__image" src="images/product_3.png"
-
-                        alt="Товар 3" width="640" height="480" loading="lazy" decoding="async">
-                        <h3 class="product-card__title">Товар 3</h3>
-                        <p class="product-card__description">Краткое описание учебного товара.</p>
+                        <img class="product-card__image" src="images/product_2.png"
+                          alt="Костюм чумного доктора «Венеция»" width="640" height="640" loading="lazy" decoding="async">
+                        <h3 class="product-card__title">Костюм чумного доктора «Венеция»</h3>
+                        <p class="product-card__description">Образ чумного доктора для театра и венецианских маскарадов.</p>
                         <p class="product-card__price">Цена: 2000 руб.</p>
-                        <a class="button button--primary product-card__button" href="index.html#popular">Подробнее</a>
+                        <button class="button button--primary product-card__button" type="button" data-product="Костюм чумного доктора «Венеция»">Заказать</button>
+                    </article>
+
+                    <article class="product-card">
+                        <img class="product-card__image" src="images/product_3.png"
+                          alt="Противогаз ГП-5" width="640" height="640" loading="lazy" decoding="async">
+                        <h3 class="product-card__title">Противогаз ГП-5</h3>
+                        <p class="product-card__description">Шлем-маска для защиты дыхания, глаз и лица с подходящим фильтром.</p>
+                        <p class="product-card__price">Цена: 2500 руб.</p>
+                        <button class="button button--primary product-card__button" type="button" data-product="Противогаз ГП-5">Заказать</button>
+                    </article>
+
+                    <article class="product-card">
+                        <img class="product-card__image" src="images/product_4.png"
+                          alt="Противогаз ГП-7" width="640" height="640" loading="lazy" decoding="async">
+                        <h3 class="product-card__title">Противогаз ГП-7</h3>
+                        <p class="product-card__description">Защита дыхания, глаз и лица с подходящим фильтром.</p>
+                        <p class="product-card__price">Цена: 3500 руб.</p>
+                        <button class="button button--primary product-card__button" type="button" data-product="Противогаз ГП-7">Заказать</button>
+                    </article>
+
+                    <article class="product-card">
+                        <img class="product-card__image" src="images/product_5.png"
+                          alt="Противогаз ГП-5М" width="640" height="640" loading="lazy" decoding="async">
+                        <h3 class="product-card__title">Противогаз ГП-5М</h3>
+                        <p class="product-card__description">Защита дыхания, глаз и лица с подходящим фильтром.</p>
+                        <p class="product-card__price">Цена: 3000 руб.</p>
+                        <button class="button button--primary product-card__button" type="button" data-product="Противогаз ГП-5М">Заказать</button>
+                    </article>
+
+                    <article class="product-card">
+                        <img class="product-card__image" src="images/product_6.png"
+                          alt="Костюм химической защиты Л-1" width="640" height="640" loading="lazy" decoding="async">
+                        <h3 class="product-card__title">Костюм химической защиты Л-1</h3>
+                        <p class="product-card__description">Защита кожи и одежды при работе в условиях химического загрязнения.</p>
+                        <p class="product-card__price">Цена: 4000 руб.</p>
+                        <button class="button button--primary product-card__button" type="button" data-product="Костюм химической защиты Л-1">Заказать</button>
                     </article>
                 </div>
             </section>
         </div>
 
+        <p class="success-message" id="success-message" role="status" hidden>
+            Форма успешно отправлена!
+        </p>
     </main>
 
     <footer class="site-footer">
         <p>&copy; 2026 Учебный проект. Все права защищены.</p>
         <p>Дисциплина: Фронтенд и бэкенд разработка</p>
     </footer>
+
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 id="order-dialog-title">Оформление заявки</h2>
+
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <div class="order-form__field">
+        <label class="order-form__label" for="selected-product">Товар</label>
+        <input class="order-form__input" id="selected-product" name="selected-product" type="text" readonly>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-name">Имя</label>
+        <input class="order-form__input" id="order-name" name="name" type="text" placeholder="Введите ваше имя" minlength="2"
+          autocomplete="given-name" required>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-email">E-mail</label>
+        <input class="order-form__input" id="order-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-phone">Телефон</label>
+        <input class="order-form__input" id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00"
+          pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+        <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-date">Дата связи</label>
+        <input class="order-form__input" id="order-date" name="date" type="date">
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-topic">Тема заявки</label>
+        <select class="order-form__select" id="order-topic" name="topic" required>
+          <option value="">Выберите тему</option>
+          <option value="product">Заказ товара</option>
+          <option value="consultation">Консультация</option>
+          <option value="delivery">Доставка</option>
+        </select>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-comment">Комментарий</label>
+        <textarea class="order-form__textarea" id="order-comment" name="comment" rows="4" placeholder="Укажите дополнительную информацию"></textarea>
+      </div>
+
+      <div class="order-form__field order-form__field--checkbox">
+        <label class="order-form__label">
+          <input class="order-form__checkbox" id="order-agreement" name="agreement" type="checkbox" required>
+          Я согласен на обработку данных
+        </label>
+      </div>
+
+      <div class="order-form__actions">
+        <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+        <button class="button button--primary" type="submit">Отправить заявку</button>
+      </div>
+    </form>
+  </dialog>
 
   <a class="back-to-top" href="#" aria-label="Вернуться в начало страницы">
     ^

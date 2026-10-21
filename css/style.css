@@ -270,9 +270,10 @@ a:focus-visible {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   object-fit: contain;
-  padding: var(--space-md);
+  object-position: center;
+  padding: var(--space-sm);
   margin-bottom: var(--space-md);
   background-color: var(--color-surface);
   border-radius: var(--radius-sm);

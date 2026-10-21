@@ -37,6 +37,7 @@ function initializeOrderDialog() {
 
       // Записываем название товара в скрытое поле формы.
       selectedProductInput.value = productName;
+      document.getElementById('order-topic').value = 'product';
 
       // Открываем модальное окно.
       orderDialog.showModal();
