@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Противогаз ГП-7ВМ — Учебный интернет-магазин</title>
+  <meta name="description" content="Описание противогаза ГП-7ВМ и оформление заявки.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Противогаз ГП-7ВМ">
+  <meta property="og:description" content="Описание противогаза ГП-7ВМ и оформление заявки.">
+  <meta property="og:image" content="https://ImBread300.github.io/kr1-html-css-shop/images/preview.jpg">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html">
+              Главная
+            </a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#popular">
+              Популярные товары
+            </a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+          </li>
+
+          <li class="site-nav__item"><a class="site-nav__link" href="delivery.html">Доставка и оплата</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="site-main">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки"><a class="breadcrumbs__link" href="index.html">Главная</a> / <a class="breadcrumbs__link" href="catalog.html">Каталог</a> / <a class="breadcrumbs__link" href="gas-masks.html">Противогазы</a><span class="breadcrumbs__current" aria-current="page">ГП-7ВМ</span></nav><section class="section"><h1>Противогаз ГП-7ВМ</h1><article class="product-card product-card--featured product-card--horizontal" data-category="gas-masks" data-price="1000">
+          <img class="product-card__image" src="images/product_1.png" alt="Противогаз ГП-7ВМ" width="640" height="640" loading="lazy" decoding="async">
+          <span class="product-card__badge">Хит</span>
+          <div class="product-card__content">
+            <p class="product-card__category">Противогазы</p>
+            <h2 class="product-card__title">Противогаз ГП-7ВМ</h2>
+            <p class="product-card__description">Защита дыхания, глаз и лица с подходящим фильтром.</p>
+            <dl class="product-card__specs">
+              <dt>Модель</dt><dd>ГП-7ВМ</dd>
+              <dt>Тип</dt><dd>Гражданский фильтрующий противогаз</dd>
+              <dt>Категория</dt><dd><a href="gas-masks.html">Противогазы</a></dd>
+            </dl>
+            <p>Изолирует органы дыхания, глаза и лицо от окружающего воздуха. Защита зависит от подходящего фильтра и исправности комплекта.</p>
+            <p>Наличие, размер и состав комплекта уточняются при оформлении заявки.</p>
+            <p class="product-card__price">Цена: 1000 руб.</p>
+            <div class="product-card__actions">
+              <button class="button button--primary product-card__button" type="button" data-product="Противогаз ГП-7ВМ">Заказать</button>
+
+            </div>
+          </div>
+        </article><p><a href="delivery.html">Доставка и оплата</a> · <a href="gas-masks.html">Другие противогазы</a></p></section>
+    <p class="success-message" id="success-message" role="status" hidden>Форма успешно отправлена!</p>
+  </main>
+  <footer class="site-footer">
+        <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+        <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+    </footer>
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 id="order-dialog-title">Оформление заявки</h2>
+
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <div class="order-form__field">
+        <label class="order-form__label" for="selected-product">Товар</label>
+        <input class="order-form__input" id="selected-product" name="selected-product" type="text" readonly>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-name">Имя</label>
+        <input class="order-form__input" id="order-name" name="name" type="text" placeholder="Введите ваше имя" minlength="2"
+          autocomplete="given-name" required>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-email">E-mail</label>
+        <input class="order-form__input" id="order-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-phone">Телефон</label>
+        <input class="order-form__input" id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00"
+          pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+        <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-date">Дата связи</label>
+        <input class="order-form__input" id="order-date" name="date" type="date">
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-topic">Тема заявки</label>
+        <select class="order-form__select" id="order-topic" name="topic" required>
+          <option value="">Выберите тему</option>
+          <option value="product">Заказ товара</option>
+          <option value="consultation">Консультация</option>
+          <option value="delivery">Доставка</option>
+        </select>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-comment">Комментарий</label>
+        <textarea class="order-form__textarea" id="order-comment" name="comment" rows="4" placeholder="Укажите дополнительную информацию"></textarea>
+      </div>
+
+      <div class="order-form__field order-form__field--checkbox">
+        <label class="order-form__label">
+          <input class="order-form__checkbox" id="order-agreement" name="agreement" type="checkbox" required>
+          Я согласен на обработку данных
+        </label>
+      </div>
+
+      <div class="order-form__actions">
+        <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+        <button class="button button--primary" type="submit">Отправить заявку</button>
+      </div>
+    </form>
+  </dialog>
+  <a class="back-to-top" href="#" aria-label="Вернуться в начало страницы">^</a>
+</body>
+</html>

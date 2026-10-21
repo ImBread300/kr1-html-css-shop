@@ -45,6 +45,7 @@
             <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
           </li>
 
+          <li class="site-nav__item"><a class="site-nav__link" href="delivery.html">Доставка и оплата</a></li>
         </ul>
       </nav>
     </div>
@@ -58,11 +59,8 @@
 
         <section class="section">
             <h1>Каталог товаров</h1>
-            <p>
-                На этой странице представлен учебный каталог товаров.
-                В дальнейшем здесь будут добавлены фильтры, сортировка и более
-                подробные карточки.
-            </p>
+            <p>Противогазы, костюмы и аксессуары. Выберите категорию или оформите заявку из карточки товара.</p>
+<nav class="category-nav" aria-label="Категории товаров"><a class="category-nav__link" href="gas-masks.html">Противогазы</a><a class="category-nav__link" href="costumes.html">Костюмы</a><a class="category-nav__link" href="accessories.html">Аксессуары</a></nav>
         </section>
 
         <div class="catalog-layout">
@@ -72,22 +70,10 @@
                 <form class="catalog-filters__form" action="#" method="get">
                     <fieldset class="catalog-filters__group">
                         <legend class="catalog-filters__legend">Категория</legend>
-
-                        <label class="catalog-filters__label">
-                            <input class="catalog-filters__checkbox" type="checkbox" name="category" value="all">
-                            Все товары
-                        </label>
-
-                        <label class="catalog-filters__label">
-                            <input class="catalog-filters__checkbox" type="checkbox" name="category" value="popular">
-                            Популярные
-                        </label>
-
-                        <label class="catalog-filters__label">
-                            <input class="catalog-filters__checkbox" type="checkbox" name="category" value="new">
-                            Новинки
-                        </label>
-                    </fieldset>
+<label class="catalog-filters__label"><input class="catalog-filters__checkbox" type="checkbox" name="category" value="gas-masks"> Противогазы</label>
+<label class="catalog-filters__label"><input class="catalog-filters__checkbox" type="checkbox" name="category" value="costumes"> Костюмы</label>
+<label class="catalog-filters__label"><input class="catalog-filters__checkbox" type="checkbox" name="category" value="accessories"> Аксессуары</label>
+</fieldset>
 
                     <fieldset class="catalog-filters__group">
                         <legend class="catalog-filters__legend">Цена</legend>
@@ -100,67 +86,174 @@
                     </fieldset>
 
                     <button class="button button--primary" type="submit">Применить</button>
+                    <button class="button button--secondary" type="reset">Сбросить</button>
                 </form>
             </aside>
 
             <section class="catalog-products">
                 <h2 class="catalog-products__title">Список товаров</h2>
+                <p id="catalog-count" role="status">Найдено товаров: 9</p>
+                <p id="catalog-empty" hidden>По выбранным условиям товаров нет. Измените фильтры или нажмите «Сбросить».</p>
 
                 <div class="products-grid">
-                    <article class="product-card product-card--featured">
-                        <img class="product-card__image" src="images/product_1.png"
-                          alt="Противогаз ГП-7ВМ" width="640" height="640" loading="lazy" decoding="async">
-                        <h3 class="product-card__title">Противогаз ГП-7ВМ</h3>
-                        <span class="product-card__badge">Хит</span>
-                        <p class="product-card__description">Защита дыхания, глаз и лица с подходящим фильтром.</p>
-                        <p class="product-card__price">Цена: 1000 руб.</p>
-                        <button class="button button--primary product-card__button" type="button" data-product="Противогаз ГП-7ВМ">Заказать</button>
-                    </article>
+                    <article class="product-card product-card--featured" data-category="gas-masks" data-price="1000">
+          <img class="product-card__image" src="images/product_1.png" alt="Противогаз ГП-7ВМ" width="640" height="640" loading="lazy" decoding="async">
+          <span class="product-card__badge">Хит</span>
+          <div class="product-card__content">
+            <p class="product-card__category">Противогазы</p>
+            <h3 class="product-card__title">Противогаз ГП-7ВМ</h3>
+            <p class="product-card__description">Защита дыхания, глаз и лица с подходящим фильтром.</p>
 
-                    <article class="product-card">
-                        <img class="product-card__image" src="images/product_2.png"
-                          alt="Костюм чумного доктора «Венеция»" width="640" height="640" loading="lazy" decoding="async">
-                        <h3 class="product-card__title">Костюм чумного доктора «Венеция»</h3>
-                        <p class="product-card__description">Образ чумного доктора для театра и венецианских маскарадов.</p>
-                        <p class="product-card__price">Цена: 2000 руб.</p>
-                        <button class="button button--primary product-card__button" type="button" data-product="Костюм чумного доктора «Венеция»">Заказать</button>
-                    </article>
+            <p class="product-card__price">Цена: 1000 руб.</p>
+            <div class="product-card__actions">
+              <button class="button button--primary product-card__button" type="button" data-product="Противогаз ГП-7ВМ">Заказать</button>
+              <a class="product-card__details" href="product-gp7vm.html">Подробнее</a>
+            </div>
+          </div>
+        </article>
 
-                    <article class="product-card">
-                        <img class="product-card__image" src="images/product_3.png"
-                          alt="Противогаз ГП-5" width="640" height="640" loading="lazy" decoding="async">
-                        <h3 class="product-card__title">Противогаз ГП-5</h3>
-                        <p class="product-card__description">Шлем-маска для защиты дыхания, глаз и лица с подходящим фильтром.</p>
-                        <p class="product-card__price">Цена: 2500 руб.</p>
-                        <button class="button button--primary product-card__button" type="button" data-product="Противогаз ГП-5">Заказать</button>
-                    </article>
+<article class="product-card product-card--sale" data-category="costumes" data-price="1600">
+          <img class="product-card__image" src="images/product_2.png" alt="Костюм чумного доктора «Венеция»" width="640" height="640" loading="lazy" decoding="async">
 
-                    <article class="product-card">
-                        <img class="product-card__image" src="images/product_4.png"
-                          alt="Противогаз ГП-7" width="640" height="640" loading="lazy" decoding="async">
-                        <h3 class="product-card__title">Противогаз ГП-7</h3>
-                        <p class="product-card__description">Защита дыхания, глаз и лица с подходящим фильтром.</p>
-                        <p class="product-card__price">Цена: 3500 руб.</p>
-                        <button class="button button--primary product-card__button" type="button" data-product="Противогаз ГП-7">Заказать</button>
-                    </article>
+          <span class="product-card__badge product-card__badge--sale">Скидка −20%</span>
+          <div class="product-card__content">
+            <p class="product-card__category">Костюмы</p>
+            <h3 class="product-card__title">Костюм чумного доктора «Венеция»</h3>
+            <p class="product-card__description">Образ чумного доктора для театра и венецианских маскарадов.</p>
 
-                    <article class="product-card">
-                        <img class="product-card__image" src="images/product_5.png"
-                          alt="Противогаз ГП-5М" width="640" height="640" loading="lazy" decoding="async">
-                        <h3 class="product-card__title">Противогаз ГП-5М</h3>
-                        <p class="product-card__description">Защита дыхания, глаз и лица с подходящим фильтром.</p>
-                        <p class="product-card__price">Цена: 3000 руб.</p>
-                        <button class="button button--primary product-card__button" type="button" data-product="Противогаз ГП-5М">Заказать</button>
-                    </article>
+            <p class="product-card__price">
+              <span class="product-card__old-price">Старая цена: <del>2000 руб.</del></span>
+              <span class="product-card__current-price">Цена со скидкой: 1600 руб.</span>
+            </p>
+            <div class="product-card__actions">
+              <button class="button button--primary product-card__button" type="button" data-product="Костюм чумного доктора «Венеция»">Заказать</button>
+              <a class="product-card__details" href="product-costume.html">Подробнее</a>
+            </div>
+          </div>
+        </article>
 
-                    <article class="product-card">
-                        <img class="product-card__image" src="images/product_6.png"
-                          alt="Костюм химической защиты Л-1" width="640" height="640" loading="lazy" decoding="async">
-                        <h3 class="product-card__title">Костюм химической защиты Л-1</h3>
-                        <p class="product-card__description">Защита кожи и одежды при работе в условиях химического загрязнения.</p>
-                        <p class="product-card__price">Цена: 4000 руб.</p>
-                        <button class="button button--primary product-card__button" type="button" data-product="Костюм химической защиты Л-1">Заказать</button>
-                    </article>
+<article class="product-card" data-category="gas-masks" data-price="2500">
+          <img class="product-card__image" src="images/product_3.png" alt="Противогаз ГП-5" width="640" height="640" loading="lazy" decoding="async">
+
+          <div class="product-card__content">
+            <p class="product-card__category">Противогазы</p>
+            <h3 class="product-card__title">Противогаз ГП-5</h3>
+            <p class="product-card__description">Шлем-маска для защиты дыхания, глаз и лица с подходящим фильтром.</p>
+
+            <p class="product-card__price">Цена: 2500 руб.</p>
+            <div class="product-card__actions">
+              <button class="button button--primary product-card__button" type="button" data-product="Противогаз ГП-5">Заказать</button>
+              <a class="product-card__details" href="gas-masks.html">В категорию</a>
+            </div>
+          </div>
+        </article>
+
+<article class="product-card product-card--sale" data-category="gas-masks" data-price="2800">
+          <img class="product-card__image" src="images/product_4.png" alt="Противогаз ГП-7" width="640" height="640" loading="lazy" decoding="async">
+
+          <span class="product-card__badge product-card__badge--sale">Скидка −20%</span>
+          <div class="product-card__content">
+            <p class="product-card__category">Противогазы</p>
+            <h3 class="product-card__title">Противогаз ГП-7</h3>
+            <p class="product-card__description">Защита дыхания, глаз и лица с подходящим фильтром.</p>
+
+            <p class="product-card__price">
+              <span class="product-card__old-price">Старая цена: <del>3500 руб.</del></span>
+              <span class="product-card__current-price">Цена со скидкой: 2800 руб.</span>
+            </p>
+            <div class="product-card__actions">
+              <button class="button button--primary product-card__button" type="button" data-product="Противогаз ГП-7">Заказать</button>
+              <a class="product-card__details" href="gas-masks.html">В категорию</a>
+            </div>
+          </div>
+        </article>
+
+<article class="product-card product-card--markdown-medium" data-category="gas-masks" data-price="2100">
+          <img class="product-card__image" src="images/product_5.png" alt="Противогаз ГП-5М" width="640" height="640" loading="lazy" decoding="async">
+
+          <span class="product-card__badge product-card__badge--markdown-medium">Средне уценённый товар</span>
+          <div class="product-card__content">
+            <p class="product-card__category">Противогазы</p>
+            <h3 class="product-card__title">Противогаз ГП-5М</h3>
+            <p class="product-card__description">Защита дыхания, глаз и лица с подходящим фильтром.</p>
+
+            <p class="product-card__condition">Уценка из-за повреждённой упаковки.</p>
+            <p class="product-card__price">
+              <span class="product-card__old-price">Старая цена: <del>3000 руб.</del></span>
+              <span class="product-card__current-price">Цена с уценкой: 2100 руб.</span>
+            </p>
+            <div class="product-card__actions">
+              <button class="button button--primary product-card__button" type="button" data-product="Противогаз ГП-5М">Заказать</button>
+              <a class="product-card__details" href="gas-masks.html">В категорию</a>
+            </div>
+          </div>
+        </article>
+
+<article class="product-card" data-category="costumes" data-price="4000">
+          <img class="product-card__image" src="images/product_6.png" alt="Костюм химической защиты Л-1" width="640" height="640" loading="lazy" decoding="async">
+
+          <div class="product-card__content">
+            <p class="product-card__category">Костюмы</p>
+            <h3 class="product-card__title">Костюм химической защиты Л-1</h3>
+            <p class="product-card__description">Защита кожи и одежды при работе в условиях химического загрязнения.</p>
+
+            <p class="product-card__price">Цена: 4000 руб.</p>
+            <div class="product-card__actions">
+              <button class="button button--primary product-card__button" type="button" data-product="Костюм химической защиты Л-1">Заказать</button>
+              <a class="product-card__details" href="costumes.html">В категорию</a>
+            </div>
+          </div>
+        </article>
+
+<article class="product-card product-card--compact product-card--new" data-category="accessories" data-price="700">
+          <img class="product-card__image" src="images/product_7.png" alt="Сумка для противогаза" width="640" height="640" loading="lazy" decoding="async">
+          <span class="product-card__badge product-card__badge--new">Новинка</span>
+          <div class="product-card__content">
+            <p class="product-card__category">Аксессуары</p>
+            <h3 class="product-card__title">Сумка для противогаза</h3>
+            <p class="product-card__description">Хранение и переноска противогаза и принадлежностей.</p>
+            <p class="product-card__price">Цена: 700 руб.</p>
+            <div class="product-card__actions">
+              <button class="button button--primary product-card__button" type="button" data-product="Сумка для противогаза">Заказать</button>
+              <a class="product-card__details" href="accessories.html">В категорию</a>
+            </div>
+          </div>
+        </article>
+
+<article class="product-card product-card--compact product-card--markdown-medium" data-category="accessories" data-price="350">
+          <img class="product-card__image" src="images/product_8.png" alt="Защитные перчатки" width="640" height="640" loading="lazy" decoding="async">
+          <span class="product-card__badge product-card__badge--markdown-medium">Средне уценённый товар</span>
+          <div class="product-card__content">
+            <p class="product-card__category">Аксессуары</p>
+            <h3 class="product-card__title">Защитные перчатки</h3>
+            <p class="product-card__description">Защита рук при хозяйственных работах.</p>
+
+            <p class="product-card__condition">Уценка из-за повреждённой упаковки.</p>
+            <p class="product-card__price">
+              <span class="product-card__old-price">Старая цена: <del>500 руб.</del></span>
+              <span class="product-card__current-price">Цена с уценкой: 350 руб.</span>
+            </p>
+            <div class="product-card__actions">
+              <button class="button button--primary product-card__button" type="button" data-product="Защитные перчатки">Заказать</button>
+              <a class="product-card__details" href="accessories.html">В категорию</a>
+            </div>
+          </div>
+        </article>
+
+<article class="product-card product-card--compact" data-category="accessories" data-price="900">
+          <img class="product-card__image" src="images/product_9.png" alt="Защитные очки" width="640" height="640" loading="lazy" decoding="async">
+          <div class="product-card__content">
+            <p class="product-card__category">Аксессуары</p>
+            <h3 class="product-card__title">Защитные очки</h3>
+            <p class="product-card__description">Защита глаз от пыли и мелких частиц.</p>
+
+            <p class="product-card__price">Цена: 900 руб.</p>
+            <div class="product-card__actions">
+              <button class="button button--primary product-card__button" type="button" data-product="Защитные очки">Заказать</button>
+              <a class="product-card__details" href="accessories.html">В категорию</a>
+            </div>
+          </div>
+        </article>
                 </div>
             </section>
         </div>

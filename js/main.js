@@ -95,3 +95,57 @@ function initializeOrderDialog() {
 }
 
 initializeOrderDialog();
+
+function initializeCatalogFilters() {
+  const filterForm = document.querySelector('.catalog-filters__form');
+  if (!filterForm) return;
+
+  const cards = Array.from(document.querySelectorAll('.catalog-products .product-card'));
+  const priceFrom = document.getElementById('price-from');
+  const priceTo = document.getElementById('price-to');
+  const count = document.getElementById('catalog-count');
+  const emptyMessage = document.getElementById('catalog-empty');
+
+  function applyFilters() {
+    const categories = Array.from(filterForm.querySelectorAll('input[name="category"]:checked'))
+      .map((input) => input.value);
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const price = Number(card.dataset.price);
+      const matchesCategory = categories.length === 0 || categories.includes(card.dataset.category);
+      const matchesPrice = (priceFrom.value === '' || price >= Number(priceFrom.value))
+        && (priceTo.value === '' || price <= Number(priceTo.value));
+      card.hidden = !(matchesCategory && matchesPrice);
+      if (!card.hidden) visibleCount += 1;
+    });
+
+    count.textContent = `Найдено товаров: ${visibleCount}`;
+    emptyMessage.hidden = visibleCount !== 0;
+  }
+
+  filterForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    priceTo.setCustomValidity('');
+    if (priceFrom.value !== '' && priceTo.value !== ''
+      && Number(priceFrom.value) > Number(priceTo.value)) {
+      priceTo.setCustomValidity('Цена «До» должна быть не меньше цены «От».');
+    }
+    if (!filterForm.reportValidity()) return;
+    applyFilters();
+  });
+
+  [priceFrom, priceTo].forEach((input) => {
+    input.addEventListener('input', () => priceTo.setCustomValidity(''));
+  });
+
+  filterForm.addEventListener('reset', () => {
+    priceTo.setCustomValidity('');
+    // Значения полей сбрасываются браузером после события reset.
+    setTimeout(applyFilters, 0);
+  });
+
+  applyFilters();
+}
+
+initializeCatalogFilters();
